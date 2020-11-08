@@ -1,6 +1,8 @@
 
 import sys
 
+
+gs_folderID = "yhack_audio"
 def transcribe_gcs(gcs_uri):
     """Asynchronously transcribes the audio file specified by the gcs_uri."""
 
@@ -68,11 +70,5 @@ def transcribe_gcs(gcs_uri):
         print("\n" + str(curr_speaker), file=f)
         print(curr_block, file=f)
 
-        
-                
 
-
-
-
-
-transcribe_gcs("gs://kt38/trimmed-daily-2.flac")
+transcribe_gcs("gs://" + gs_folderID + "/trimmed-daily-2.flac")
